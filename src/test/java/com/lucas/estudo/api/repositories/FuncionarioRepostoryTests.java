@@ -86,7 +86,7 @@ public class FuncionarioRepostoryTests {
 	@Test
 	public void testeBuscarFuncionarioPorEmailECpfParaEmailInvalido() {
 		Funcionario funcionario = this.funcionarioRepository.findByCpfOrEmail(CPF, "email@invalido.com");
-		
+
 		assertNotNull(funcionario);
 	}
 	
@@ -96,15 +96,5 @@ public class FuncionarioRepostoryTests {
 		
 		assertNotNull(funcionario);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
