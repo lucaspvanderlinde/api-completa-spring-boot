@@ -24,8 +24,7 @@ import com.lucas.estudo.api.repositories.EmpresaRepository;
 @ActiveProfiles("test")
 public class EmpresaServiceTest {
 
-	// Essa anotação @MockBean cria um objeto falso pra representar a
-	// empresaRepository
+	// Essa anotação @MockBean cria um objeto falso pra representar a empresaRepository
 	@MockBean
 	private EmpresaRepository empresaRepository;
 
@@ -38,10 +37,8 @@ public class EmpresaServiceTest {
 	public void setUp() throws Exception {
 		// Criando mock para cada método passado, findByCnpj e save.
 		// BDDMockito.given passando o metodo
-		// Utilizando esse metodo utilitaria Mockito.anyString() pra retornar qualquer
-		// coisa
-		// Utilizando esse metodo utilitaria Mockito.any(Empresa.class)) pra retornar
-		// qualquer objeto do tipo Empresa
+		// Utilizando esse metodo utilitaria Mockito.anyString() pra retornar qualquer String
+		// Utilizando esse metodo utilitaria Mockito.any(Empresa.class)) pra retornar qualquer objeto do tipo Empresa
 		// .willReturn passando um novo objeto de retorno.
 		BDDMockito.given(this.empresaRepository.findByCnpj(Mockito.anyString())).willReturn(new Empresa());
 		BDDMockito.given(this.empresaRepository.save(Mockito.any(Empresa.class))).willReturn(new Empresa());
