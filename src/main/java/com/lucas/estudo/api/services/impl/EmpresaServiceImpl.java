@@ -32,4 +32,9 @@ public class EmpresaServiceImpl implements EmpresaService {
 		return this.empresaRepository.save(empresa);
 	}
 
+	@Override
+	public void delete(Long id) {
+		log.info("Deletando uma empresa: {}", id);
+		this.empresaRepository.deleteById(id);
+	}
 }

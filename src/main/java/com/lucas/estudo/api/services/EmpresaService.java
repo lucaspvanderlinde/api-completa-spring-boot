@@ -22,4 +22,12 @@ public interface EmpresaService {
 	 */
 	Empresa persistir(Empresa empresa);
 
+	/**
+	 * 
+	 * Deletando uma empresa
+	 * 
+	 * @param Id
+	 * @return 
+	 */
+	void delete(Long id);
 }
